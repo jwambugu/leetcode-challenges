@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge.
 
 // If the town judge exists, then:
@@ -23,11 +25,16 @@ package main
 func findJudge(n int, trust [][]int) int {
 	trustCounts := make(map[int]int)
 
+	fmt.Println(trustCounts)
+
 	for i := 1; i <= n; i++ {
 		trustCounts[i] = 0
 	}
 
+	fmt.Println(trustCounts, trust)
+
 	for i := 0; i < len(trust); i++ {
+		fmt.Println(trust[i][0], trust[i][1])
 		trustCounts[trust[i][0]] -= 1
 		trustCounts[trust[i][1]] += 1
 	}
