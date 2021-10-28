@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"sort"
+	"strconv"
 	"strings"
 )
 
@@ -98,12 +100,25 @@ func minExpenses(values []int) int {
 
 func maxValue(s string, column string) int {
 	values := strings.Split(s, "\n")
-
 	headers := strings.Split(values[0], ",")
 
-	fmt.Println(headers)
+	hash := make(map[string][]int)
 
-	return 0
+	for _, row := range values[1:] {
+		r := strings.Split(row, ",")
+
+		for i := 0; i < len(r); i++ {
+			v, err := strconv.Atoi(r[i])
+			if err != nil {
+				continue
+			}
+
+			hash[headers[i]] = append(hash[headers[i]], v)
+		}
+	}
+
+	sort.Ints(hash[column])
+	return hash[column][len(hash[column])-1]
 }
 
 func main() {
@@ -137,7 +152,7 @@ func main() {
 	//fmt.Println(howSum(8, []int{2, 3, 5}, memo{}))    // [2,2,2,2]
 	//fmt.Println(howSum(300, []int{7, 14}, memo{}))    // []
 
-	//fmt.Println(maxValue("id,name,age,act.,room,dep.\n1,Jack,68,T,13,8\n17,Betty,28,F,15,7", "age"))
-	//fmt.Println(maxValue("area,land\n3722,CN\n6612,RU\n3855,CA\n3797,USA", "area"))
-	//fmt.Println(maxValue("city,temp2,temp\nParis,7,-3\nDubai,4,-4\nPorto,-1,-2", "temp"))
+	fmt.Println(maxValue("id,name,age,act.,room,dep.\n1,Jack,68,T,13,8\n17,Betty,28,F,15,7", "age")) // 68
+	fmt.Println(maxValue("area,land\n3722,CN\n6612,RU\n3855,CA\n3797,USA", "area"))                  // 6612
+	fmt.Println(maxValue("city,temp2,temp\nParis,7,-3\nDubai,4,-4\nPorto,-1,-2", "temp"))            // -2
 }
