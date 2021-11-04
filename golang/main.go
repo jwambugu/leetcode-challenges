@@ -166,7 +166,10 @@ func main() {
 	//fmt.Println(missingNumber([]int{0}))                         // 1
 	//fmt.Println(missingNumber([]int{1}))                         // 1
 
-	fmt.Println(findDisappearedNumbers([]int{4, 3, 2, 7, 8, 2, 3, 1})) // [5,6]
-	fmt.Println(findDisappearedNumbers([]int{1, 1}))                   // [2]
-	fmt.Println(findDisappearedNumbers([]int{}))                       // [2]
+	//fmt.Println(findDisappearedNumbers([]int{4, 3, 2, 7, 8, 2, 3, 1})) // [5,6]
+	//fmt.Println(findDisappearedNumbers([]int{1, 1}))                   // [2]
+
+	//fmt.Println(singleNumber([]int{2, 2, 1})) // 1
+	fmt.Println(singleNumber([]int{4, 1, 2, 1, 2})) // 4
+	//fmt.Println(singleNumber([]int{1}))             // 1
 }
