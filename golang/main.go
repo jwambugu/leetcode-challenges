@@ -170,6 +170,10 @@ func main() {
 	//fmt.Println(findDisappearedNumbers([]int{1, 1}))                   // [2]
 
 	//fmt.Println(singleNumber([]int{2, 2, 1})) // 1
-	fmt.Println(singleNumber([]int{4, 1, 2, 1, 2})) // 4
+	//fmt.Println(singleNumber([]int{4, 1, 2, 1, 2})) // 4
 	//fmt.Println(singleNumber([]int{1}))             // 1
+
+	fmt.Println(climbStairs(2))  // 2
+	fmt.Println(climbStairs(3))  // 3
+	fmt.Println(climbStairs(45)) // 1836311903
 }
