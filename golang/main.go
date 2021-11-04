@@ -160,9 +160,13 @@ func main() {
 	//fmt.Println(containsDuplicate([]int{1, 2, 3, 4}))                   // false
 	//fmt.Println(containsDuplicate([]int{1, 1, 1, 3, 3, 4, 3, 2, 4, 2})) // true
 
-	fmt.Println(missingNumber([]int{3, 0, 1}))                   // 2
-	fmt.Println(missingNumber([]int{0, 1}))                      // 2
-	fmt.Println(missingNumber([]int{9, 6, 4, 2, 3, 5, 7, 0, 1})) // 8
-	fmt.Println(missingNumber([]int{0}))                         // 1
-	fmt.Println(missingNumber([]int{1}))                         // 1
+	//fmt.Println(missingNumber([]int{3, 0, 1}))                   // 2
+	//fmt.Println(missingNumber([]int{0, 1}))                      // 2
+	//fmt.Println(missingNumber([]int{9, 6, 4, 2, 3, 5, 7, 0, 1})) // 8
+	//fmt.Println(missingNumber([]int{0}))                         // 1
+	//fmt.Println(missingNumber([]int{1}))                         // 1
+
+	fmt.Println(findDisappearedNumbers([]int{4, 3, 2, 7, 8, 2, 3, 1})) // [5,6]
+	fmt.Println(findDisappearedNumbers([]int{1, 1}))                   // [2]
+	fmt.Println(findDisappearedNumbers([]int{}))                       // [2]
 }
