@@ -152,7 +152,17 @@ func main() {
 	//fmt.Println(howSum(8, []int{2, 3, 5}, memo{}))    // [2,2,2,2]
 	//fmt.Println(howSum(300, []int{7, 14}, memo{}))    // []
 
-	fmt.Println(maxValue("id,name,age,act.,room,dep.\n1,Jack,68,T,13,8\n17,Betty,28,F,15,7", "age")) // 68
-	fmt.Println(maxValue("area,land\n3722,CN\n6612,RU\n3855,CA\n3797,USA", "area"))                  // 6612
-	fmt.Println(maxValue("city,temp2,temp\nParis,7,-3\nDubai,4,-4\nPorto,-1,-2", "temp"))            // -2
+	//fmt.Println(maxValue("id,name,age,act.,room,dep.\n1,Jack,68,T,13,8\n17,Betty,28,F,15,7", "age")) // 68
+	//fmt.Println(maxValue("area,land\n3722,CN\n6612,RU\n3855,CA\n3797,USA", "area"))                  // 6612
+	//fmt.Println(maxValue("city,temp2,temp\nParis,7,-3\nDubai,4,-4\nPorto,-1,-2", "temp"))            // -2
+
+	//fmt.Println(containsDuplicate([]int{1, 2, 3, 1}))                   // true
+	//fmt.Println(containsDuplicate([]int{1, 2, 3, 4}))                   // false
+	//fmt.Println(containsDuplicate([]int{1, 1, 1, 3, 3, 4, 3, 2, 4, 2})) // true
+
+	fmt.Println(missingNumber([]int{3, 0, 1}))                   // 2
+	fmt.Println(missingNumber([]int{0, 1}))                      // 2
+	fmt.Println(missingNumber([]int{9, 6, 4, 2, 3, 5, 7, 0, 1})) // 8
+	fmt.Println(missingNumber([]int{0}))                         // 1
+	fmt.Println(missingNumber([]int{1}))                         // 1
 }
